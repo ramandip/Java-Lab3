@@ -1,0 +1,36 @@
+//Lab 3 problems document
+ 
+ Problem found in Action event button click-> when user click button named "3" JTextBox remains unchanged; 
+ 1. User has to enter both operands, then he is eligible for chain operation.
+ 2. User has to enter two operands again, if he clicks CE button.
+ 
+ following is faulty module
+ if(arg0.getSource()==btn[11]){//for '5'
+		
+		
+		if(op1==Double.parseDouble(tDisplay.getText())) 
+		{
+			tDisplay.setText("5");
+		}else{
+        tDisplay.setText(tDisplay.getText().concat("5"));}
+	
+	
+	
+	}
+	
+	Instead of above code, i want to use this.but logical or operator is not working.
+	
+	if(arg0.getSource()==btn[11]){//For "5" click
+		
+		if(op1==Double.parseDouble(tDisplay.getText())||tDisplay.getText()==""){
+		
+		
+			tDisplay.setText("5");
+		}else{
+        tDisplay.setText(tDisplay.getText().concat("5"));}
+	
+	
+	
+	}
+	
+	
